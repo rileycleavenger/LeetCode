@@ -6,9 +6,10 @@ class Solution:
         if len(words) != len(pattern):
             return False
         
-        wordToChar, charToWord = {}, {}
+        wordToChar = {}
+        charToWord = {}
         
-        for w, c in zip(words, pattern):
+        for w, c, in zip(words, pattern):
             if w in wordToChar and wordToChar[w] != c:
                 return False
             if c in charToWord and charToWord[c] != w:
