@@ -8,18 +8,18 @@ class Node:
 """
 
 class Solution:
-    def copyRandomList(self, head: 'Node') -> 'Node':
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         
         if not head:
             return None
         
         hash = {}
-        
         curr = head
+        
         while curr:
             hash[curr] = Node(curr.val)
             curr = curr.next
-        
+            
         curr = head
         while curr:
             if curr.next:
