@@ -14,18 +14,18 @@ class Solution:
             return None
         
         hash = {}
-        curr = head
         
+        curr = head
         while curr:
             hash[curr] = Node(curr.val)
             curr = curr.next
             
         curr = head
         while curr:
-            if curr.next:
-                hash[curr].next = hash[curr.next]
             if curr.random:
                 hash[curr].random = hash[curr.random]
+            if curr.next:
+                hash[curr].next = hash[curr.next]
             curr = curr.next
-            
+        
         return hash[head]
