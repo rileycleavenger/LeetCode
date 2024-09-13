@@ -8,6 +8,5 @@ class Solution:
             return str1
         elif len(str1) > len(str2):
             return self.gcdOfStrings(str1[len(str2):], str2)
-        elif len(str2) > len(str1):
+        elif len(str1) < len(str2):
             return self.gcdOfStrings(str1, str2[len(str1):])
-        
