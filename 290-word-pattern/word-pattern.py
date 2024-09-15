@@ -3,7 +3,8 @@ class Solution:
         
         words = s.split(' ')
         
-        if len(words) != len(pattern): return False
+        if len(words) != len(pattern):
+            return False
         
         wordToChar = {}
         charToWord = {}
@@ -15,5 +16,5 @@ class Solution:
                 return False
             wordToChar[w] = c
             charToWord[c] = w
-        
+            
         return True
