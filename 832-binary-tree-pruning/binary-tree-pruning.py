@@ -10,10 +10,10 @@ class Solution:
         if not root:
             return None
         
-        root.right = self.pruneTree(root.right)
         root.left = self.pruneTree(root.left)
+        root.right = self.pruneTree(root.right)
         
-        if root.val == 0 and not root.left and not root.right:
+        if root.val == 0 and not root.right and not root.left:
             return None
         else:
             return root
