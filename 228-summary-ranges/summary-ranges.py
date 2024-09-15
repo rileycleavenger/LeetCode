@@ -14,5 +14,5 @@ class Solution:
                 else:
                     res.append(str(nums[start])+"->"+str(nums[end-1]))
                 start = end
-                
+        
         return res
