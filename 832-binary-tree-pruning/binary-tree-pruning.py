@@ -13,7 +13,7 @@ class Solution:
         root.left = self.pruneTree(root.left)
         root.right = self.pruneTree(root.right)
         
-        if root.val == 0 and not root.right and not root.left:
+        if root.val == 0 and not root.left and not root.right:
             return None
         else:
             return root
