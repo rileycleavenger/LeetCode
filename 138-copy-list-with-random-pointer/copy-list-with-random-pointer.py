@@ -27,5 +27,5 @@ class Solution:
             if curr.next:
                 hash[curr].next = hash[curr.next]
             curr = curr.next
-        
+            
         return hash[head]
