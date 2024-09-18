@@ -5,7 +5,7 @@ class Solution:
         currSum = 0
         
         for x in nums:
-            currSum = max(x, currSum+x)
+            currSum = max(currSum +x, x)
             maxSum = max(maxSum, currSum)
             
         return maxSum
