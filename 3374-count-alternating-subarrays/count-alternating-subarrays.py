@@ -1,11 +1,11 @@
 class Solution:
     def countAlternatingSubarrays(self, nums: List[int]) -> int:
         
-        count = 0
+        count = 1
         left = 0
         
-        for right in range(len(nums)):
-            if right != 0 and nums[right] == nums[right-1]:
+        for right in range(1, len(nums)):
+            if nums[right] == nums[right-1]:
                 left = right
             count += right - left + 1
         
