@@ -6,7 +6,6 @@ class Solution:
         for x in nums:
             hash[x] = hash.get(x, 0) + 1
             if x in hash and hash[x] > 1:
-                return True
-            
+                return True 
         
         return False
