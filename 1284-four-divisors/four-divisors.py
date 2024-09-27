@@ -8,8 +8,7 @@ class Solution:
                 if i % j == 0:
                     curr_divs.add(i/j)
                     curr_divs.add(j)
-                if len(curr_divs) > 4:
-                    break
+    
             if len(curr_divs) == 4:
                 total += int(sum(curr_divs))
 
