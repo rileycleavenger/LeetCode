@@ -7,6 +7,7 @@ class Solution:
         for right in range(1, len(nums)):
             if nums[right] == nums[right-1]:
                 left = right
-            count += right - left + 1
-        
+                
+            count += right-left+1
+            
         return count
