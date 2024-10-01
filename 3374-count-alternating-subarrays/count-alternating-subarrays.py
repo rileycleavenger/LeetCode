@@ -5,8 +5,8 @@ class Solution:
         left = 0
         
         for right in range(1, len(nums)):
-            if nums[right-1] == nums[right]:
+            if nums[right] == nums[right-1]:
                 left = right
             count += right - left + 1
-            
+        
         return count
